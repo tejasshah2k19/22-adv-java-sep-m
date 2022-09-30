@@ -1,0 +1,165 @@
+what type of application we can create using jee?
+webapp 
+website
+
+server 
+web server 
+tomcat  
+
+
+adv java -> 
+	file -> new -> dynamic web project 
+
+	project name : 22-adv-java-sep-m 
+	module version : 2.5 
+	finish 
+	
+tomcat -> install -> done 
+
+tomcat ->eclipse -> link 
+
+file -> new ->server -> apache -> tomcat 8.5 ->  browse tomcat folder 
+			-> C:\program file\apache software foundation\tomcat\ -> select folder -> finish 
+-------------------------------------------------------------------------------------------
+window -> show view -> 
+			 
+
+1) 
+src -> java file -> .java 
+build -> .class 
+webcontent -> website page [html ]  , css , js , video , images 
+	META-INF
+	WEB-INF 
+		lib 
+		web.xml 
+		
+2)
+	src -> main -> java -> .java 
+			    -> webapp 
+			    		-> html , css, js,object 
+			    		
+			
+	
+first page -> 
+	index.html 
+	
+right click on webapp or webcontent -> new -> html -> index.html -> finish 
+
+
+------------------------------------------------------------------
+direct project run --> index.html ? why ? 
+
+
+webcontent/webapp ->WEB-INF->web.xml 
+
+create signup page with firstname email and password field 
+
+------------------------------------------------------------------
+
+user --> server ---> request 
+server --> process --> response 
+
+
+
+user --> request --> server ---> process --> response --> user 
+
+
+class A extends Thread{
+
+	public void run(){
+		//logic 
+	}
+}
+
+
+
+
+
+HttpServlet class is belongs to javax package.
+inside javax we have servlet package. 
+ 
+we get above things from servlet-api.jar file. 
+ 
+how to link servlet-api.jar 
+
+right click on project -> java build path -> lib -> add external jar -> browse till tomcat lib directory ->
+select servlet-api.jar -> open -> click on order and exports -> select all -> apply and close 
+
+
+ 
+src 
+src/main/java 
+
+create a folder in src controller 
+
+
+1) create class : extends HttpServlet  [ Servlet ] 
+2) override service : public void service(HttpServletRequest request,HttpServletResponse response)
+3) map your servlet in web.xml 
+
+
+	<servlet>
+		<servlet-name>SignupServlet</servlet-name>
+		<servlet-class>controller.SignupServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SignupServlet</servlet-name>
+		<url-pattern>/signup</url-pattern>
+	</servlet-mapping>
+
+
+
+-------------------------------------------------------------------------------------
+
+jsp : java servlet page 
+	  java server pages 
+	  
+	InputNum.jsp -> java + html  
+
+
+
+create? 
+WebContent -> file -> new -> jsp 	
+by default -> jsp -> html directly 
+
+how to write java? 
+<%  %>  -> scriptlet 
+
+print?
+out 
+<%= %>   expression 
+ 
+jsp 
+
+what is the full name of jsp?
+java server page or java servlet page 
+
+why we use jsp ? 
+html + java 
+
+how we can write java logic in jsp? 
+using scriptlet 
+<% int a = 90; %> 
+
+how we can print java stuff on jsp?
+expression
+<%=a %>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+ 
