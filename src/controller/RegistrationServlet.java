@@ -52,6 +52,13 @@ public class RegistrationServlet extends HttpServlet {
 		if (password == null || password.trim().length() == 0) {
 			isError = true;
 			request.setAttribute("passwordError", "Please Enter Password");
+		} else if (password.trim().length() <= 7) {
+			isError = true;
+			request.setAttribute("passwordError", "Please Enter atleast 8 characters");
+		} else if (isStrongPassword(password) == false) {
+			isError = true;
+			request.setAttribute("passwordError", "Please Enter Atleast 1 Upper, Lower and Digit ");
+
 		} else {
 			request.setAttribute("passwordValue", password);
 		}
@@ -75,5 +82,23 @@ public class RegistrationServlet extends HttpServlet {
 			rd.forward(request, response);
 		}
 
+	}
+
+	boolean isStrongPassword(String password) {
+		// msdf987324kllsfd
+		boolean upper = false, lower = false, digit = false;
+		for (int i = 0; i < password.length(); i++) {
+			char x = password.charAt(i);
+
+			if (Character.isUpperCase(x)) {
+				upper = true;
+			} else if (Character.isLowerCase(x)) {
+				lower = true;
+			} else if (Character.isDigit(x)) {
+				digit = true;
+			}
+		}
+		return upper && lower && digit;// strong
+		//
 	}
 }
