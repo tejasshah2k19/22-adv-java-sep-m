@@ -147,8 +147,61 @@ expression
 <%=a %>  
 
 
+------------------------------------------------------------------
+
+InputPattern.jsp	
+		Num :  5 
+		
+			submit 
+input ? 
+num ? 
 
 
+	1
+	12
+	123
+	1234
+	12345
+------------------------------------------------------------------
+
+
+input jsp => servlet -> validation -> jsp -> print 
+
+
+
+MVC -> model view controller 
+MVVM -> Model View View Model 
+
+input | output -> view 
+
+logic | Servlet -> controller 
+
+data -> model 
+
+fb.com -> Login.html -> email/password -> submit -> request ->server --> LoginServlet -> 
+								email password read -> db connection -> db email password -> 
+									true false ->	controller 
+											if true -> home 
+											else -> login error 
+View -> Login.html | Home.html  
+Controller ->  LoginServlet 
+model [bean dao ] -> email ,password=> db 											
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
 
 
 

@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import util.Validators;
+
 public class RegistrationServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -37,12 +39,20 @@ public class RegistrationServlet extends HttpServlet {
 		if (email == null || email.trim().length() == 0) {
 			isError = true;
 			request.setAttribute("emailError", "Please Enter Email");
-		} else if (email.matches("^([a-zA-Z0-9])+@([a-zA-Z])+\\.([a-zA-Z]){2,3}$") == false) {
+		} else if (Validators.isEmail(email) == false) {
 			isError = true;
 			request.setAttribute("emailError", "Please enter valid Email");
 			request.setAttribute("emailValue", email);
 
 		}
+
+		// } else if (email.matches("^([a-zA-Z0-9])+@([a-zA-Z])+\\.([a-zA-Z]){2,3}$") ==
+		// false) {
+//			isError = true;
+//			request.setAttribute("emailError", "Please enter valid Email");
+//			request.setAttribute("emailValue", email);
+//
+//		}
 
 		else {
 			request.setAttribute("emailValue", email);
