@@ -58,7 +58,15 @@
 
 
 
+	<servlet>
+		<servlet-name>LifeCycleServlet</servlet-name>
+		<servlet-class>controller.LifeCycleServlet</servlet-class>
+	</servlet>
 
+	<servlet-mapping>
+		<servlet-name>LifeCycleServlet</servlet-name>
+		<url-pattern>/LifeCycleServlet</url-pattern>
+	</servlet-mapping>
 
 
 

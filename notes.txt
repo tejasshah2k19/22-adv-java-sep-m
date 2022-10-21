@@ -189,12 +189,81 @@ model [bean dao ] -> email ,password=> db
 
 
 
+------------------------------------------
+
+servlet life cycle 
+
+Signup.jsp => submit -> SignupServlet ->
+
+
+1) load class
+2) instance create 
+3) init -> 1 time 
+4) service -> logic -> all the time -> request  
+5) destroy -> 1 time -> shutdown server 
+
+ ------------------------------------------
+ 
+why servlet ?
+
+-----------------------------------------
+
+Add hobby and Country in Registration.jsp
+
+
+servlet life ->
+1)load class
+2)create instance 
+2)init 
+3)service - request 
+4)destroy 
 
 
 
+if 20 request -> submit -> server
+
+how many instances are created for servlet ?
+1
+
+
+how 20 ?
+thread
+-----------------------------
+
+jsp
+servlet 
+
+validation
+
+signup
+
+login 
+
+
+java -> sql
+
+hw java connect your database ?
+class -> connection -> 
+hw java execute sql ? 
+query-> class 
 
 
 
+jdbc-mysql-mysql.connector  
+1)  driver - db - [class-n] jar 
+2)  connection
+3)  sql query execute 
+
+type 1
+type 2
+type 3 
+type 4* 
+
+java.sql	
+
+ 	
+
+ 
 
 
 
