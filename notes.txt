@@ -172,11 +172,11 @@ input jsp => servlet -> validation -> jsp -> print
 MVC -> model view controller 
 MVVM -> Model View View Model 
 
-input | output -> view 
+input | output -> view ->jsp HTmL
 
 logic | Servlet -> controller 
 
-data -> model 
+data -> model [ bean dao ] 
 
 fb.com -> Login.html -> email/password -> submit -> request ->server --> LoginServlet -> 
 								email password read -> db connection -> db email password -> 
@@ -261,12 +261,28 @@ type 4*
 
 java.sql	
 
- 	
+
+dbConnection
+		driver load 
+		getConnection(url,username,password) 
+		 	
 
  
 
+mysql -> open 
 
-
+	use 22gensepm;
+	
+	create table users (
+		userId integer primary key auto_increment,
+		firstName varchar(30),
+		email varchar(40),
+		password varchar(30),
+		gender varchar(6)
+	);
+	
+	insert into users (firstName,email,password,gender) values ('ram','ram@ayodhya.com','sita123','male');
+	 
 
 
 

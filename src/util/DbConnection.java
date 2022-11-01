@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DbConnection {
 
-	public static void getConnection() {
+	public static Connection getConnection() {
 		// url -> db -> dbname
 		// driver
 		// username
@@ -16,12 +16,12 @@ public class DbConnection {
 		String driver = "com.mysql.cj.jdbc.Driver";
 		String userName = "root";
 		String password = "root";
-
+		Connection con = null;
 		try {
 			// load driver
 			Class.forName(driver);
 
-			Connection con = DriverManager.getConnection(dbUrl, userName, password);
+			con = DriverManager.getConnection(dbUrl, userName, password);
 
 			if (con != null) {
 				System.out.println("dbConnected...");
@@ -33,6 +33,8 @@ public class DbConnection {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		return con;
 
 	}
 

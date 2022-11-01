@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.UserDao;
 import util.Validators;
 
 public class RegistrationServlet extends HttpServlet {
@@ -87,6 +88,11 @@ public class RegistrationServlet extends HttpServlet {
 			rd.forward(request, response);// request -> error
 
 		} else {
+			//store info -> db -> users 
+			UserDao userDao = new UserDao();
+			userDao.insertUser(firstName,email,password,gender); 
+			
+			
 			// Home.jsp
 			RequestDispatcher rd = request.getRequestDispatcher("Home.jsp");
 			rd.forward(request, response);
