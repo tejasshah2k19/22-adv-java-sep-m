@@ -2,7 +2,10 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
 
+import bean.UserBean;
 import util.DbConnection;
 
 //cohesion -> 
@@ -33,6 +36,37 @@ public class UserDao {
 			System.out.println("Exception in UserDao::insertUser()");
 			e.printStackTrace();
 		}
+	}
+
+	//
+
+	public ArrayList<UserBean> getAllUsers() {
+
+		ArrayList<UserBean> users = new ArrayList<UserBean>();
+
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("select * from users");
+
+			ResultSet rs = pstmt.executeQuery(); // 5 records
+
+			while (rs.next()) {
+				UserBean user = new UserBean();
+				user.setUserId(rs.getInt("userId"));
+				user.setFirstName(rs.getString("firstName"));
+				user.setEmail(rs.getString("email"));
+				user.setPassword(rs.getString("password"));
+				user.setGender(rs.getString("gender"));
+				users.add(user);
+
+			}
+
+		} catch (Exception e) {
+			System.out.println("Exception in UserDao::getAllUsers()");
+			e.printStackTrace();
+		}
+		return users;
+
 	}
 
 }
