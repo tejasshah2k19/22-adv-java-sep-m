@@ -8,5 +8,7 @@
 </head>
 <body>
 <H2>Welcome........</H2>
+
+<a href="ListUserServlet">List User</a>
 </body>
 </html>

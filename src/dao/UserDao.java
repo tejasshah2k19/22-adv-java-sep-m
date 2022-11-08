@@ -50,7 +50,7 @@ public class UserDao {
 
 			ResultSet rs = pstmt.executeQuery(); // 5 records
 
-			while (rs.next()) {
+			while (rs.next()) { //r1 r2 r3 r4 r5|true =>  false 
 				UserBean user = new UserBean();
 				user.setUserId(rs.getInt("userId"));
 				user.setFirstName(rs.getString("firstName"));
