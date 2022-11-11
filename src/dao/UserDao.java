@@ -69,4 +69,17 @@ public class UserDao {
 
 	}
 
+	public void deleteUser(int userId) {
+		try {
+			Connection con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("delete from users   where userId = ? ");
+			pstmt.setInt(1, userId);
+			
+			pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			System.out.println("Exception in UserDao::deleteUser()");
+			e.printStackTrace();
+		}		
+	}
 }
