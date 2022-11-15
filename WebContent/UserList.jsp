@@ -33,7 +33,12 @@
 			<td><%=users.get(i).getGender()%></td>
 			<td><%=users.get(i).getEmail()%></td>
 			<td><%=users.get(i).getPassword()%></td>
-			<td><a href="DeleteUserServlet?userId=<%=users.get(i).getUserId()%>">Delete</a></td>
+			<td>
+			<a href="DeleteUserServlet?userId=<%=users.get(i).getUserId()%>">Delete</a>
+			|
+			<a href="ViewUserServlet?userId=<%=users.get(i).getUserId()%>">View</a>
+			
+			</td>
 		</tr>
 		<%
 			}
@@ -41,5 +46,24 @@
 
 
 	</table>
+	<br><br><br>
+	<form action="SearchUserServlet">
+		Search : <input type="text" name="fname"/><br>
+		<input type="submit" value="Search"/>
+	</form>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
