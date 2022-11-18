@@ -37,6 +37,8 @@
 			<a href="DeleteUserServlet?userId=<%=users.get(i).getUserId()%>">Delete</a>
 			|
 			<a href="ViewUserServlet?userId=<%=users.get(i).getUserId()%>">View</a>
+			|
+			<a href="EditUserServlet?userId=<%=users.get(i).getUserId()%>">Edit</a>
 			
 			</td>
 		</tr>
