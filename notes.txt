@@ -284,10 +284,68 @@ mysql -> open
 	insert into users (firstName,email,password,gender) values ('ram','ram@ayodhya.com','sita123','male');
 	 
 
+---------------------------------------------------------------------------------------
 
+Filter -> 
+
+icici.com 
+->india
+->usa
+->bali
+->russia 
+->pakistan?
+
+
+Login.jsp email password => submit => GeoFilter {s,p,a} yes goback no goahead=>  LoginServlet ==> validate? 
+
+
+incoming request ----> filter ---> server servlet
+
+
+Signup.jsp => fn ln email password 
+			  fn          password => submit -> SignupServlet -> 
+			  										1) fn em pwd => getParameter()
+			  										2) validation => error back  | success goahead  
+			  										3) data -> dao -> insert(user) -> db insert query 
+			  										4) go to list page 
+			  										 
+500 users => singup.jsp => submit => [F]  
+								500 SignupServlet =>
+												200 validation fail 	  										  
+												300 db insert 
+
+
+
+
+1 subject exam 
+10 subject exam 
+
+
+Royal => inq => [F]Rec => Dhiraj Sir => 50 => 1 => 10 min [ 500 min ]  
+						nonIt => 2  
+						10th =>  2
+						12th =>  2 
+						EC =>    2 
+						------------
+						 		 8 => 80 min 
+
+
+WhatsApp => image 25 mb -> x -> send -> [25]server[25] -> y 
+
+
+WhatsApp => image 25 mb -> x -> send -> [25]server[5] -> y
+
+
+
+WhatsApp => image 25 mb -> x -> send ->filter->images? compress =>  [5]server[5] -> y 
 
 	
 
+1) class XXX implements Filter 
+2) init()  doFilter()  destroy() 
+3) mapping web.xml 
+
+---------------------------------------------------------------------------------------
 
 
 

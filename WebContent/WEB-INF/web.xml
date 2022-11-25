@@ -81,5 +81,36 @@
 	</servlet-mapping>
 
 
+	<filter>
+		<filter-name>AddBookFilter</filter-name>
+		<filter-class>filter.AddBookFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>AddBookFilter</filter-name>
+		<url-pattern>/AddBookServlet</url-pattern>
+	</filter-mapping>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </web-app>
