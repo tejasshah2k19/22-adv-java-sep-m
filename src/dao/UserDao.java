@@ -138,4 +138,20 @@ public class UserDao {
 		}
 		return user;
 	}
+
+	public void updateUser(String firstName, int userId) {
+		Connection con = null;
+
+		try {
+			con = DbConnection.getConnection();
+			PreparedStatement pstmt = con.prepareStatement("update users set firstName = ? where userId = ? ");
+			pstmt.setString(1, firstName);
+			pstmt.setInt(2, userId);
+			pstmt.executeUpdate();// insert update delete
+
+		} catch (Exception e) {
+			System.out.println("Exception in UserDao::updateUser()");
+			e.printStackTrace();
+		}
+	}
 }
