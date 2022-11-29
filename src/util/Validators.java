@@ -21,4 +21,19 @@ public class Validators {
 		}
 		return true; // valid
 	}
+	
+	public static boolean isDigit(String str) {
+		return str.matches("\\d+"); //1 or N 
+		//return str.matches("[0123456789]");
+		//return str.matches("[0-9]");
+	}
+
+//	public static void main(String[] args) {
+//		System.out.println(isDigit("12242342"));
+//		System.out.println(isDigit("1224aa2342"));
+//		System.out.println(isDigit("12242  342"));
+//		System.out.println(isDigit("12242$342"));
+//		System.out.println(isDigit("1"));
+//		
+//	}
 }

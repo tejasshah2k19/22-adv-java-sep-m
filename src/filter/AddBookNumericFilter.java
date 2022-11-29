@@ -10,39 +10,36 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-public class AddBookFilter implements Filter {
+import util.Validators;
 
-	public void init(FilterConfig arg0) throws ServletException {
+public class AddBookNumericFilter implements Filter {
+
+	@Override
+	public void destroy() {
+		// TODO Auto-generated method stub
 
 	}
 
+	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		System.out.println("AddBookFilter::doFilter()");
+		System.out.println("AddBookNumericFilter::doFilter()");
 
-		String bookName = request.getParameter("bookName");
 		String price = request.getParameter("price");
 		String qty = request.getParameter("qty");
 
 		boolean isError = false;
 
-		if (bookName == null || bookName.trim().length() == 0) {
+		if (Validators.isDigit(price) == false) {
 			isError = true;
-			request.setAttribute("bookNameError", "Please Enter BookName");
-		} else {
-			request.setAttribute("bookNameValue", bookName);
-		}
-
-		if (price == null || price.trim().length() == 0) {
-			isError = true;
-			request.setAttribute("priceError", "Please Enter Price");
+			request.setAttribute("priceError", "Please Enter Valid Price");
 		} else {
 			request.setAttribute("priceValue", price);
 		}
 
-		if (qty == null || qty.trim().length() == 0) {
+		if (Validators.isDigit(qty) == false) {
 			isError = true;
-			request.setAttribute("qtyError", "Please Enter Qty");
+			request.setAttribute("qtyError", "Please Enter Valid Qty");
 		} else {
 			request.setAttribute("qtyValue", qty);
 		}
@@ -57,9 +54,12 @@ public class AddBookFilter implements Filter {
 			chain.doFilter(request, response);// identify -> next filter ? servlet ?
 
 		}
+	}
+
+	@Override
+	public void init(FilterConfig arg0) throws ServletException {
+		// TODO Auto-generated method stub
 
 	}
 
-	public void destroy() {
-	}
 }

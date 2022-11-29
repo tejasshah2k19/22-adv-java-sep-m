@@ -93,8 +93,15 @@
 
 
 
+	<filter>
+		<filter-name>AddBookNumericFilter</filter-name>
+		<filter-class>filter.AddBookNumericFilter</filter-class>
+	</filter>
 
-
+	<filter-mapping>
+		<filter-name>AddBookNumericFilter</filter-name>
+		<url-pattern>/AddBookServlet</url-pattern>
+	</filter-mapping>
 
 
 
