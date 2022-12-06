@@ -346,11 +346,40 @@ WhatsApp => image 25 mb -> x -> send ->filter->images? compress =>  [5]server[5]
 3) mapping web.xml 
 
 ---------------------------------------------------------------------------------------
+how to store user's information !? 
+
+	1) cookie - client side [ browser ] 
+	2) session  - server side [ server's memory ] 
 
 
 
 
+Welcome , Mr X 
 
+
+name : god 
+value : shiva 
+		Save  
+		
+cookie -> god:shiva
+
+1) how to store data in cookie
+2) read data from cookie 
+3) remove 
+
+default expired time for cookie is 1 year.
+
+
+AddCookie.jsp -> name value -> save -> 
+PrintCookie.jsp -> print cookie 
+RemoveCookie.jsp -> name cookie -> remove [ expired time ] setMaxAge();
+
+-----------------------------------------------------------------------------
+ 
+
+
+
+		
 
 
 
