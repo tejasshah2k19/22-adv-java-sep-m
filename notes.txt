@@ -379,7 +379,32 @@ RemoveCookie.jsp -> name cookie -> remove [ expired time ] setMaxAge();
 
 
 
+		phase 1 
 		
+		
+ecom app 
+	java + jee 
+
+database ->  jdbc 
+inMemoryDB -> collection 	
+
+users = [u1{1,a,b},u2{2,c,d},u3{3,e,f},u4{4,x,y}] 
+User => { userId , email , password , firstName } 
+
+
+Login.jspy
+	email
+	password
+			x
+			y 
+			submit  
+	true -> Home.jsp [ cookie set userId=4 ]
+	false -> Login.jsp with error 
+
+
+	phase 2 
+	
+------------
 
 
 
