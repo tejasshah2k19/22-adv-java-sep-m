@@ -375,38 +375,24 @@ PrintCookie.jsp -> print cookie
 RemoveCookie.jsp -> name cookie -> remove [ expired time ] setMaxAge();
 
 -----------------------------------------------------------------------------
- 
 
+session -> server memory 
 
-
-		phase 1 
-		
-		
-ecom app 
-	java + jee 
-
-database ->  jdbc 
-inMemoryDB -> collection 	
-
-users = [u1{1,a,b},u2{2,c,d},u3{3,e,f},u4{4,x,y}] 
-User => { userId , email , password , firstName } 
-
-
-Login.jspy
-	email
-	password
-			x
-			y 
-			submit  
-	true -> Home.jsp [ cookie set userId=4 ]
-	false -> Login.jsp with error 
-
-
-	phase 2 
+1) how to create session? 
+	session can't created by us it will created by server.
+2) how to access session? 
+	we can ask session to server! 
+	HttpSession session = request.getSession();	
 	
-------------
+	session.setAttribute("key",value);
+
+	session.setAttribute("email",email);
 
 
+	
+	
+	
+	 
 
 
 	

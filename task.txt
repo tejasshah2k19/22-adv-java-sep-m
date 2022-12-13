@@ -1,0 +1,55 @@
+ 
+
+
+
+		phase 1 
+		
+		
+ecom app 
+	java + jee 
+
+database ->  jdbc 
+inMemoryDB -> collection 	
+
+users = [u1{1,a,b},u2{2,c,d},u3{3,e,f},u4{4,x,y}] 
+User => { userId , email , password , firstName } 
+
+
+Login.jsp
+	email
+	password
+			x
+			y 
+			submit  
+	true -> Home.jsp [ cookie set userId=4 ]
+	false -> Login.jsp with error 
+
+
+	
+	Login.jsp Home.jsp LoginServlet 
+
+phase 2 
+	 
+	
+	browser close -> website -> 
+		Login.jsp / Home.jsp 
+			if cookie of userId is present with valid id ? 
+		  -
+
+		Home.jsp 
+		ListProducts ,MyCart , Logout
+		
+		LogoutServlet -> logout link -> cookie remove userid and then Login.jsp
+		ListProducts [ List all products From products table ] 
+		
+		DataBase -> [db] [ inMemory] =>
+			products :{productId,name,price,qty,imagepath*}[5 dummy product] 
+			condition -> if qty is zero then product must not be part of ListProducts.jsp
+		[     
+			name 
+			price 
+			image 
+			AddToCart
+		]	 
+------------------------------------------------------------------
+	
