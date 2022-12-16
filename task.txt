@@ -51,5 +51,29 @@ phase 2
 			image 
 			AddToCart
 		]	 
+		
+phase 3
+	AddToCart -> link -> user click -> 	
+	[ carts : { cartId , productId , userId } ] 
+	My Cart -> [MyCart.jsp ]
+	list products [ my cart's product info ] 
+	Checkout -> payment done -> click -> order place ->
+	
+	checkout -> orderPlace [
+		1) remove all items from cart 
+		2) add those items into order table 
+		[order : {orderId: 1 , name:"1plus",price:140000,date:"2022-12-16",userId:1},
+		{orderId: 2 , name:"cp plus",price:3000,date:"2022-12-16",userId:1}
+		  ] 
+	]  	
+		
+	MyOrders: 
+		MyOrders.jsp 
+		list of all orders [ logged in user ] 
 ------------------------------------------------------------------
+	
+
+	
+	
+	
 	
