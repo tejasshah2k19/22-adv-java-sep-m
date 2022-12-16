@@ -72,6 +72,37 @@ phase 3
 		list of all orders [ logged in user ] 
 ------------------------------------------------------------------
 	
+session -> storage -> server side -> created by server 
+
+HttpSession  session = request.getSession();
+
+session.setAttribute("key",value);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	
 	

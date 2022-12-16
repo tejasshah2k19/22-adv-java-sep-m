@@ -82,4 +82,24 @@
     <servlet-name>AddSessionServlet</servlet-name>
     <url-pattern>/AddSessionServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>PrintSessionServlet</display-name>
+    <servlet-name>PrintSessionServlet</servlet-name>
+    <servlet-class>controller.PrintSessionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PrintSessionServlet</servlet-name>
+    <url-pattern>/PrintSessionServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>LogoutServlet</display-name>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>controller.LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

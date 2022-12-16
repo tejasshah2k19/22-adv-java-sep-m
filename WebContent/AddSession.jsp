@@ -14,5 +14,8 @@
 	</form>
 	<br>
 
+	<a href="PrintSessionServlet">Print Session Detail</a>
+	<br>
+	<a href="LogoutServlet">Logout</a>
 </body>
 </html>
