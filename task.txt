@@ -80,8 +80,16 @@ session.setAttribute("key",value);
 
 
 
+1) setMaxInactiveInterval() 
+2) web.xml -> 
+		<session-config>
+				<session-timeout>
+						2  
+				</>
+		</>
 
 
+how server manage session? 
 
 
 

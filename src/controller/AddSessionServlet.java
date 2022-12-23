@@ -17,7 +17,7 @@ public class AddSessionServlet extends HttpServlet {
 		//
 		HttpSession session = request.getSession();
 
-		session.setMaxInactiveInterval(60 * 2);
+		session.setMaxInactiveInterval(60 * 3);
 		session.setAttribute(name, value);
 
 		response.sendRedirect("AddSession.jsp");

@@ -388,8 +388,32 @@ session -> server memory
 
 	session.setAttribute("email",email);
 
+-----------------------------------------------------------------------------Li
 
+Listener -> listen->  
+ 					events -> act
+	server start => log | third party api | pay as you grow|go 
+	server shutdown -> stop all 
 	
+	server start -> aws connection | gray log  
+	server stop - > aws close  [ 16 ] | gray log  
+	 				
+	event -> server start / stop 
+			-> act => start -> logs | aws : connect 
+			       => stop  -> logs | aws :	disconnect 
+	
+1) class YYY implements XXXXListener 
+2) override method - logic 
+3) web.xml 
+
+
+			       
+ 
+ 
+ 	
+ 
+ 					
+ 
 	
 	
 	 
