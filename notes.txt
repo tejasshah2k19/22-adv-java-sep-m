@@ -407,8 +407,56 @@ Listener -> listen->
 3) web.xml 
 
 
-			       
+TASK ==>   99 online , 5000 online
+
+session => 			       
+		1) session create  [ ++ ] 
+		2) session destroy [ -- ]  
  
+----------------------------------------------------------------------------------
+ even 
+ ArrayList<CartBean> carts  = [ 1,2,3,4,5,6] 
+ 
+ 
+ for(int i=0;i<carts.size();i++){
+ 	if(carts.get(i).getUserId().equals(userId) ){
+ 	 	carts.remove(i);i--;
+ 	}
+ }
+
+	 
+	carts.stream().forEach()
+	carts.stream().filter()
+	carts.stream().map()
+	
+   List<CartBean> list = 	carts.stream().filter(cart->cart.getUserId()!= userId).collect(Collectors.toList());
+	
+	ArrayList<CartBean> list = 	(ArrayList<CartBean>)carts.stream().filter(cart->cart.getUserId()!= userId).collect(Collectors.toList());
+	
+	
+*--------------------------------------------------------------
+
+inclusion :- 
+		1) static <%@ include %> 
+		2) dynamic <jsp:include > 
+		
+		
+		static inclusion 
+			header.jsp -> hit -> code copy paste -> InHome.jsp  
+			
+		Home.jsp 10 line 
+		footer.jsp add static [ 5 line ] 
+		total line -> 15 
+
+		Home.jsp 10 line 
+		Header.jsp add dynamic [ goto header.jsp -> output ] 
+		
+		
+		Header.jsp -> int x =10; 
+		Footer.jsp -> int y = 20 ; // this can be accessible 
+		
+		
+		
  
  	
  
