@@ -456,12 +456,97 @@ inclusion :-
 		Footer.jsp -> int y = 20 ; // this can be accessible 
 		
 		
+*--------------------------------------------------------------
 		
+ db 
+ calculation 
  
+ 500 
+------------------------------------------------------
+<%@ page errorPage="Error.jsp" %> 
+	import="java.util.Date,java.util.Scanner" import="java.io.File"
+	buffer="8kb" autoFlush="true"
+
+web.xml 
+	<error-code>404 
+		page -> 404.jsp 
+		
+
+------------------------------------------------------------------
  	
+ Servlet Lifecycle --> 
  
- 					
+ 1) load class
+ 2) create instance 
+ 3) init()
+ 4) service()
+ 5) destroy() 
  
+ JSP -> java servlet pages 
+ 
+ 1) Translation .jsp --> .java 
+ 2) compilation .java --> .class 
+ 3) load class 
+ 4) create instance
+ 5) jspInit( ) 
+ 6) _jspService( ) 
+ 7) jspDestroy( ) 
+ 
+ 
+ 
+ 
+ 
+ A.jsp 
+ 	Hi 
+ 	<%
+ 		int a = 10; 
+ 	%>
+ 
+
+Ajsp.java 
+	_jspService() 
+   			print -> Hi
+   			int a = 10;
+   			
+Ajsp.class 
+   			
+   			
+   			
+${firstNameError}
+	 		it will print value of firstNameError key if present 
+ 
+ ${ }  -> EL { expression Language } 
+ 
+print -> jsp  
+
+Servlet ->
+request.setAttribute("firstNameError","Please Enter FirstName");
+
+jsp ->
+request ->	${firstNameError}
+	
+cookie ->   ${cookie.firstName.value}  cookie.cookieName.value 
+
+session -> ${sessionScope.firstName} 
+
+${ 3 * 6 } 
+
+${ 3 / 0 } 
+
+${ 3 div 5 } 
+
+${ 3 mul 6 } 
+
+
+
+
+
+
+
+
+
+
+
 	
 	
 	 
