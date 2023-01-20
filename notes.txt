@@ -538,6 +538,33 @@ ${ 3 div 5 }
 ${ 3 mul 6 } 
 
 
+------------------------
+
+import java.util.Date; 
+
+Date d  = new Date();
+
+int h = d.getHours();
+
+h >= 0 && h < 12 
+	GM
+h >= 12 && h <= 17
+	GA 
+h > 17 && h <= 24
+	GE 
+	
+EL function --> java --> 	
+	<b> 
+	<h1> 
+	
+	greet()
+	
+	EL function 
+1) java class - logic 
+2) .tld 
+3) web.xml [ map tld ]  
+4) jsp - use [ import ] 
+ 	
 
 
 

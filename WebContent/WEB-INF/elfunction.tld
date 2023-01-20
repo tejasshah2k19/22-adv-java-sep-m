@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib>
+
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<uri>www.royal.com/faculty/tejas</uri>
+
+	<function>
+		<name>greet</name>
+		<function-class>elfunction.GreetElFunction</function-class>
+		<function-signature>String greet()</function-signature>
+	</function>
+
+</taglib>  

@@ -122,4 +122,13 @@
     <servlet-name>ElServlet</servlet-name>
     <url-pattern>/ElServlet</url-pattern>
   </servlet-mapping>
+  
+  
+  <jsp-config>
+  	<taglib>
+  		<taglib-uri>www.royal.com/faculty/tejas</taglib-uri>
+  		<taglib-location>/WEB-INF/elfunction.tld</taglib-location>
+  	</taglib>
+  </jsp-config>
+  
 </web-app>
