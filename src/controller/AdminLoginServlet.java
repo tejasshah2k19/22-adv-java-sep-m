@@ -3,6 +3,7 @@ package controller;
 import java.io.IOException;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,6 +19,7 @@ public class AdminLoginServlet extends HttpServlet {
 		// ServletConfig - init() -getServletConfig()
 
 		ServletConfig config = getServletConfig();// servlet xml
+		ServletContext context = getServletContext();
 
 		String correctEmail = config.getInitParameter("email");
 		String correctPassword = config.getInitParameter("password");

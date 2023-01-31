@@ -566,8 +566,19 @@ EL function --> java -->
 4) jsp - use [ import ] 
  	
 
+------------------------------------
+
+jstl -> java standard tag library 
+
+1)	core 
+2)	sql
+3)	format 
+4)	xml
+5)	function 
 
 
+1) add jstl.jar 
+2) import in jsp and use 
 
 
 
