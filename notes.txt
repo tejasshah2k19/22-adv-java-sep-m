@@ -582,6 +582,36 @@ jstl -> java standard tag library
 
 
 
+-----------------------------------------------------------
+<b> <c:if> 
+
+CustomTag --> userdefine tag -> 
+
+category:-
+1) SimpleTag 
+2) ClassicTag 
+
+
+<greet/> ---> Good Morning, Good Noon 
+
+
+add jsp-api.jar from tomcat/lib -> link 
+
+
+<greet></greet>
+1) class -> extends SimpleTagSupport logic 
+		doTag() - logic 
+2) tld -> <tag> 
+3) web.xml -> tld mapping ->jsp-config 
+4) use in jsp ----
+tag without body without attribte 
+ 
+
+
+
+
+
+
 
 
 
