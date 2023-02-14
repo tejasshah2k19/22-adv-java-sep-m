@@ -135,6 +135,10 @@
 			<taglib-uri>www.royal.com/stag</taglib-uri>
 			<taglib-location>/WEB-INF/stag.tld</taglib-location>
 		</taglib>
+		<taglib>
+			<taglib-uri>www.royal.com/ctag</taglib-uri>
+			<taglib-location>/WEB-INF/ctag.tld</taglib-location>
+		</taglib>
 	</jsp-config>
 	<servlet>
 		<description></description>
