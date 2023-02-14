@@ -604,10 +604,19 @@ add jsp-api.jar from tomcat/lib -> link
 2) tld -> <tag> 
 3) web.xml -> tld mapping ->jsp-config 
 4) use in jsp ----
-tag without body without attribte 
+tag without body without attribute 
  
+----------------------------------------------------
 
-
+simple tag 
+	without body with attribute 
+	
+	<sqr num="3"/> ==> 9
+	
+	<sqr num="<%=%>">
+	<sqr num="${}">
+	
+ 
 
 
 
